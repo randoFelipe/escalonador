@@ -1,8 +1,8 @@
 package main
 
-import "Processo"
+import "pkg/Processo"
 
-from Escalonador import Escalonador
+
 
 proc1 = Processo(1, 9, 10, False)
 proc2 = Processo(2,10,4,False)
