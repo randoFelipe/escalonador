@@ -44,7 +44,7 @@ func cpuExecutor(p Processo, quantum int) (duracao int) {
 //função responsavel por realocar os objetos dentro de uma array
 //ela pega o primeiro elemento da array e coloca no fim, realocando todos os outros objetos para
 //sua posição -1
-func reArrange(lista []Processo) (listaReArranjada []Processo) {
+func reArrange(lista *[5]Processo) {
 	var aux Processo
 	for i := 0; i < len(lista)-1; i++ {
 		if i == 0 {
@@ -53,5 +53,4 @@ func reArrange(lista []Processo) (listaReArranjada []Processo) {
 		lista[i] = lista[i+1]
 	}
 	lista[len(lista)-1] = aux
-	return
 }
