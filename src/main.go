@@ -49,8 +49,9 @@ func reArrange(lista *[5]Processo) {
 	for i := 0; i < len(lista)-1; i++ {
 		if i == 0 {
 			aux = lista[0]
+		} else if i < 4 {
+			lista[i] = lista[i+1]
 		}
-		lista[i] = lista[i+1]
 	}
 	lista[len(lista)-1] = aux
 }
